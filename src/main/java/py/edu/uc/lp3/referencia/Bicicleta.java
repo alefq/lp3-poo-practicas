@@ -3,8 +3,8 @@ package py.edu.uc.lp3.referencia;
 public class Bicicleta {
 
 	/*
-	 * Los campos y métodos con "private" sólo pueden ser accedidos en el scope
-	 * de definición de la clase
+	 * Los campos y métodos con "private" sólo pueden ser accedidos en el scope de
+	 * definición de la clase
 	 */
 	private String marca;
 	private int velocidad;
@@ -14,13 +14,14 @@ public class Bicicleta {
 	 */
 	protected Double radioRueda;
 	/*
-	 * El modificador "friendly" significa que no se colocó ningún modificador
-	 * de acceso. Tiene los mismos niveles que "protected"
+	 * El modificador "friendly" significa que no se colocó ningún modificador de
+	 * acceso. Tiene los mismos niveles que "protected"
 	 */
 	Integer cambios;
 
 	public static void main(String[] args) {
 		Bicicleta bici = new Bicicleta();
+		// Envío del mensaje de que cambie su velocidad a 10
 		bici.setVelocidad(10);
 		bici.velocidad = 0;
 	}
@@ -49,7 +50,7 @@ public class Bicicleta {
 
 	public void frenar(int velocidadFinal, Integer x, Integer y) {
 		if (x != null && y != null) {
-			/* si estoy en terreno resbaladizo*/
+			/* si estoy en terreno resbaladizo */
 		} else {
 
 			while (velocidad > velocidadFinal)
