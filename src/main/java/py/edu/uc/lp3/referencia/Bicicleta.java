@@ -59,7 +59,11 @@ public class Bicicleta {
 	}
 
 	public void setVelocidad(int velocidad) {
-		this.velocidad = velocidad;
+		if (velocidad > 40) {
+			velocidad = 30;
+		} else {
+			this.velocidad = velocidad;
+		}
 	}
 
 	public int getVelocidad() {
@@ -95,7 +99,12 @@ public class Bicicleta {
 	}
 
 	public Double getRadioRueda() {
-		return radioRueda;
+		return calcularRadioRueda();
+	}
+
+	private Double calcularRadioRueda() {
+		//Sumo el tamaño de la cubierta y de la llanta
+		return null;
 	}
 
 }

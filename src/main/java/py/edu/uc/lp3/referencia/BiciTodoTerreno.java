@@ -9,5 +9,7 @@ public class BiciTodoTerreno extends Bicicleta {
 	public void acelerar() {
 		super.acelerar();
 		setVelocidad(0);
+		radioRueda = 0d;
+		
 	}
 }
