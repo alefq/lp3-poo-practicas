@@ -10,4 +10,4 @@ Univesidad Católica "Nuestra Señora de la Asunción"
 Sede Asunción
 
 
-Paraguay, América del Sur
+Paraguay, America del Sur
