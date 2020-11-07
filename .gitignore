@@ -37,5 +37,4 @@ build.gradle
 gradle/
 gs-rest-service-complete/.springBeans
 **/*.springBeans
-hola.tmp
-hola2.tmp
+*.tmp
