@@ -37,4 +37,7 @@ build.gradle
 gradle/
 gs-rest-service-complete/.springBeans
 **/*.springBeans
+
+#Esta Linea fue escrita por Kevin March 
 *.tmp
+
