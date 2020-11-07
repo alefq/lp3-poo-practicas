@@ -8,3 +8,6 @@ Facultad de Ciencias y Tecnologías
 Univesidad Católica "Nuestra Señora de la Asunción"
 
 Sede Asunción
+
+
+Paraguay, América del Sur
