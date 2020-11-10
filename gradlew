@@ -186,3 +186,5 @@ if [ "$(uname)" = "Darwin" ] && [ "$HOME" = "$PWD" ]; then
 fi
 
 exec "$JAVACMD" "$@"
+
+#Que interesante tu codigo, soy Adrian :)
