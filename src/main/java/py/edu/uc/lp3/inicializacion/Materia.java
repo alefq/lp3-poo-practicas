@@ -49,7 +49,7 @@ public class Materia {
 		Auto auxilio = new Auto();
 		/* Creamos una nueva instancia de la clase Auto */
 		setTransporte(new Auto());
-		/* Enviamoe el mensaje de arrancar a la clase recientemente creada */
+		/* Enviamos el mensaje de arrancar a la clase recientemente creada */
 		getTransporte().arrancar();
 
 		setAlumno(new Alumno());
@@ -97,6 +97,11 @@ public class Materia {
 
 	public void setProfesor(Profesor pProfesor) {
 		profesor = pProfesor;
+	}
+
+	public static void inicializarDefaults() {
+		//Aquí inicializaríamos los valores default para poder cargar información
+		//por ejemplo en ciertas constantes
 	}
 
 }

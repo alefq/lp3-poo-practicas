@@ -1,4 +1,4 @@
-package py.edu.uc.lp3.interfaces.instrumento;
+package py.edu.uc.lp3.claseabstracta;
 
 public class Note {
 
