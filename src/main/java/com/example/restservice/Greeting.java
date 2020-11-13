@@ -1,14 +1,15 @@
 package com.example.restservice;
 
-public class Greeting {
+import py.edu.uc.lp3.inicializacion.Materia;
+
+public class Greeting extends BaseResponse {
 
 	private long id;
 	private String content;
 	private String name;
 	private String lastName;
 	private int age;
-	private String mensaje;
-	private int codigoHttp;
+	private Materia materia; 
 
 	public Greeting(long id, String content) {
 		this.id = id;
@@ -62,22 +63,16 @@ public class Greeting {
 		this.content = content;
 	}
 
-	public String getMensaje() {
-		return mensaje;
-	}
 
-	public void setMensaje(String mensaje) {
-		this.mensaje = mensaje;
-	}
-
-	public int getCodigoHttp() {
-		return codigoHttp;
-	}
-
-	public void setCodigoHttp(int codigoHttp) {
-		this.codigoHttp = codigoHttp;
-	}
 	
+	public Materia getMateria() {
+		return materia;
+	}
+
+	public void setMateria(Materia materia) {
+		this.materia = materia;
+	}
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub

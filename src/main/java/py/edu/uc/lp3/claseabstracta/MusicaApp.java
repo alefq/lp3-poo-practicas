@@ -13,10 +13,12 @@ public class MusicaApp {
 
 	public static void main(String[] args) {
 		Wind flute = new Wind();
+		Brass brass = new Brass();
 		tune(flute); /*
 					 * Al llamar al método static "tune" estoy haciendo un
 					 * Upcasting, "conviertiendo" la clase Wind a una de las
 					 * interfaces que implemneta.
 					 */
+		tune(brass);
 	}
 }

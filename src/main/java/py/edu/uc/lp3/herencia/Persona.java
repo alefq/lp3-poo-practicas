@@ -1,8 +1,9 @@
 package py.edu.uc.lp3.herencia;
 
+import java.awt.Point;
 import java.io.Serializable;
 
-public class Persona implements Serializable {
+public class Persona implements Serializable, GPSTraceable {
 	/*
 	 * Convertimos nuestra clase Persona al estandar Java Bean. Implementamos la
 	 * interfaz Serializable. Mediante las interfaces establecemos un protocolo,
@@ -88,6 +89,13 @@ public class Persona implements Serializable {
 
 	public void setNumeroCedula(int numeroCedula) {
 		this.numeroCedula = numeroCedula;
+	}
+
+	@Override
+	public GpsPosition getPosicion() {
+		GpsPosition point = new GpsPosition();
+		// TODO Auto-generated method stub
+		return point;
 	}
 
 }

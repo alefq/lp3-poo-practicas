@@ -32,6 +32,7 @@ public class GreetingController {
 	
 	@GetMapping("/videos")
 	public Video videos() {
+		//Upcasting de Pelicula a Video - Se sube la jerarquía
 		return new Pelicula();
 	}
 	

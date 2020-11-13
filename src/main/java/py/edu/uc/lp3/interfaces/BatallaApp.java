@@ -10,6 +10,7 @@ public class BatallaApp {
 		BatallaApp batalla = new BatallaApp();
 		Superman superman = new Superman();
 		AntiHeroe antiHeroe = new AntiHeroe();
+		Ropa ropa = new Ropa();
 
 		/*
 		 * Como la biciVoladora, sabe como volar (implementa la interface
@@ -18,8 +19,15 @@ public class BatallaApp {
 		BiciVoladora biciVoladora = new BiciVoladora();
 
 		batalla.hacerVolar(superman, biciVoladora);
+		
+		
+		
 		batalla.hacerVolar(superman, antiHeroe);
+		batalla.hacerVolar(ropa, biciVoladora);
+		
+		
 		batalla.hacerPelear(superman, antiHeroe);
+		
 		/*
 		 * Esta llamada no es válida porque superman, no sabe mentir (no tiene
 		 * el comportamiento de la interface Mentiroso)
