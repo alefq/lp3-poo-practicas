@@ -1,8 +1,15 @@
 package py.edu.uc.lp3.inicializacion;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
+import py.edu.uc.lp3.exceptions.EdadInsuficienteException;
+import py.edu.uc.lp3.exceptions.NacionalidadException;
 import py.edu.uc.lp3.herencia.Alumno;
 import py.edu.uc.lp3.herencia.Auto;
+import py.edu.uc.lp3.herencia.Persona;
 import py.edu.uc.lp3.herencia.Profesor;
+import py.edu.uc.lp3.interfaces.identidad.Identificable;
 
 public class Materia {
 	/*
@@ -12,19 +19,40 @@ public class Materia {
 	 * archivo que la contiene.
 	 */
 
+	/**
+	 * @param args
+	 */
+	/*
+	 * Para la clase01 declaramos con el modificador static para poder utilizarlo
+	 * dentro del método main. Al declarar una propiedad o un método con el
+	 * modificador "static" estamos haciendo que petenezca a toda la Clase, es decir
+	 * el valor es compartido por todas las instancias
+	 */
+	public static Auto transporteDefault;
+
 	private Auto transporte;
 
 	private Alumno alumno;
 	private Profesor profesor;
+	/*
+	 * La propiedad codigo, es una propiedad de instancia, es decir cada nuevo
+	 * objeto tiene su propio valor para esta propiedad
+	 */
 	private String codigo;
+	private String descripcion;
+
+	/*
+	 * Una lista (la Clase Java Arraylist, que contendrá a los alumnos inscriptos)
+	 */
+	private ArrayList<Alumno> alumnos = new ArrayList<Alumno>();
 
 	public Materia() {
-		// TODO Auto-generated constructor stub
+		inicializarMateria();
 	}
 
 	public Materia(String codigo) {
+		this();
 		setCodigo(codigo);
-		inicializarMateria();
 	}
 
 	/*
@@ -32,32 +60,52 @@ public class Materia {
 	 * Java, es decir puede ejecutarse directamente
 	 */
 	public static void main(String[] args) {
+		Materia java1 = new Materia();
 		/*
 		 * La clase System es parte del JRE y contiene un campo de tipo PrintStream para
 		 * imprimir en la consola. Al utilizar directamente un string entre comillas,
 		 * por detrás se instancia un objeto de tipo String
 		 */
 		System.out.println(new String("Hello World!"));
-		Materia lp3 = new Materia();
-		lp3.inicializarMateria();
+		java1.inicializarMateria();
 
-		System.out.println("Alumno: " + lp3.getAlumno().getNombre());
-		System.out.println("Profesor: " + lp3.getProfesor().getNombre());
+		// Persona guardia = new Persona();
+		System.out.println("Alumno: " + java1.getAlumno().getNombre());
+		System.out.println("Profesor: " + java1.getProfesor().getNombre());
 	}
 
 	public void inicializarMateria() {
-		Auto auxilio = new Auto();
 		/* Creamos una nueva instancia de la clase Auto */
-		setTransporte(new Auto());
+		transporteDefault = new Auto();
 		/* Enviamos el mensaje de arrancar a la clase recientemente creada */
-		getTransporte().arrancar();
+		transporteDefault.arrancar();
 
 		setAlumno(new Alumno());
 		setProfesor(new Profesor());
 
-		getAlumno().setNombre("Bart");
-		getProfesor().setNombre("Xavier");
-		getAlumno().setNumeroMatricula(1);
+		getAlumno().setNombre("Ale");
+		getAlumno().setApellido("Feltes");
+		getProfesor().setNombre("Luca");
+		getProfesor().setApellido("Cernuzzi");
+		getAlumno().setNumeroMatricula(37122);
+		System.out.println("Alumno: " + getAlumno());
+		System.out.println("Profesor: " + getProfesor());
+
+		reservarSilla(getAlumno());
+		reservarSilla(getProfesor());
+
+	}
+
+	public void reservarSilla(Persona persona) {
+		System.out.println("Silla reservada: " + persona);
+		if (persona instanceof Profesor) {
+			boolean resultad = reservarProyector(persona, getCodigo());
+		}
+	}
+
+	private boolean reservarProyector(Persona persona, String codigo2) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	public String getCodigo() {
@@ -72,36 +120,74 @@ public class Materia {
 
 	}
 
-	/**
-	 * @param args
-	 */
-	public Auto getTransporte() {
-		return transporte;
-	}
-
-	public void setTransporte(Auto pTransporte) {
-		transporte = pTransporte;
-	}
-
 	public Alumno getAlumno() {
 		return alumno;
 	}
 
-	public void setAlumno(Alumno pAlumno) {
-		alumno = pAlumno;
+	public void setAlumno(Alumno alumno) {
+		this.alumno = alumno;
 	}
 
 	public Profesor getProfesor() {
 		return profesor;
 	}
 
-	public void setProfesor(Profesor pProfesor) {
-		profesor = pProfesor;
+	public void setProfesor(Profesor profesor) {
+		this.profesor = profesor;
+	}
+
+	public ArrayList<Alumno> getAlumnos() {
+		return alumnos;
+	}
+
+	public void setAlumnos(ArrayList<Alumno> alumnos) {
+		this.alumnos = alumnos;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public void inscribirPersona(Alumno alumno2) throws NacionalidadException, IOException, EdadInsuficienteException {
+
+		if (alumno.getEdad() < 18) {
+
+		}
+		/*
+		 * Simulamos que es una inscripción para becas y sólo permitimos inscripción de
+		 * alumnos con nacionalidad paraguaya
+		 */
+		if (!Identificable.CODIGO_ISO_PARAGUAY.equals(alumno2.getCodigoISOPais())) {
+			/*
+			 * Cuándo no tiene el código ISO de Paraguay, creamos una nueva excepción y
+			 * agregamos un mensaje explicativo utilizando el constructor que recibe un
+			 * String
+			 */
+			throw new NacionalidadException(
+					"Sólo se aceptan alumnos de nacionalidad Paraguaya. El alumno que intento inscribirse es: "
+							+ alumno2.toString() + " y tiene nacionalidad " + alumno2.getCodigoPais());
+		} else {
+			System.out.println("Inscribiendo a: " + alumno2);
+		}
+
+	}
+
+	public Auto getTransporte() {
+		return transporte;
+	}
+
+	public void setTransporte(Auto transporte) {
+		this.transporte = transporte;
 	}
 
 	public static void inicializarDefaults() {
-		//Aquí inicializaríamos los valores default para poder cargar información
-		//por ejemplo en ciertas constantes
+		// En caso de ser necesario, aquí settearíamos valores mínimos
+		//para que se puedan utilizar los métodos estáticos 
+		
 	}
 
 }
