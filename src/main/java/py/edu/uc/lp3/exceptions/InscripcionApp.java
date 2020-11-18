@@ -31,7 +31,9 @@ public class InscripcionApp {
 		Alumno alumno2 = new Alumno("Monica", "Geller", 17);
 
 		alumno2.setNumeroMatricula(1235);
-		alumno2.setCodigoPais(Identificable.CODIGO_ISO_BRASIL);
+		alumno2.setCodigoPais(Identificable.CODIGO_ISO_PARAGUAY);
+		
+		alumno.setCodigoPais(Identificable.CODIGO_ISO_BRASIL);
 
 		/* Asignamos el profesor */
 		poojava.setProfesor(profesor);

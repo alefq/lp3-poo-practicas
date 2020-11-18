@@ -6,6 +6,7 @@ public class Auto {
 	String marca;
 	String modelo;
 	int velocidad;
+	long numeroChapa;
 
 	public Auto() {
 		setMarca("Sin marca");
@@ -57,6 +58,16 @@ public class Auto {
 	public void setVelocidad(int velocidad) {
 		this.velocidad = velocidad;
 	}
+
+	public long getNumeroChapa() {
+		return numeroChapa;
+	}
+
+	public void setNumeroChapa(long numeroChapa) {
+		this.numeroChapa = numeroChapa;
+	}
+	
+	
 
 
 }

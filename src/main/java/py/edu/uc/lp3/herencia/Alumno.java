@@ -35,4 +35,10 @@ public class Alumno extends Persona {
     public void setNumeroMatricula(int numeroMatricula) {
         this.numeroMatricula = numeroMatricula;
     }
+    
+    @Override
+    public String toString() {
+    	// TODO Auto-generated method stub
+    	return getNombre() + " " + getApellido() + ", " + getEdad() + ", " + getCodigoISOPais();
+    }
 }

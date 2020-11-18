@@ -154,8 +154,9 @@ public class Materia {
 
 	public void inscribirPersona(Alumno alumno2) throws NacionalidadException, IOException, EdadInsuficienteException {
 
-		if (alumno.getEdad() < 18) {
-
+		if (alumno2.getEdad() < 18) {
+			throw new EdadInsuficienteException("Edad insuficiente: " + alumno2.toString() + ". Se requiere mínimo 18 años.");
+			//throw new EdadInsuficienteException();
 		}
 		/*
 		 * Simulamos que es una inscripción para becas y sólo permitimos inscripción de
