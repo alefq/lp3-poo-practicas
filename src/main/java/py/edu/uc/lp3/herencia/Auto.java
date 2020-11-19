@@ -1,6 +1,8 @@
 package py.edu.uc.lp3.herencia;
 
-public class Auto {
+import javax.swing.ImageIcon;
+
+public class Auto implements GPSTraceable {
 	/* Definimos las propiedades para nuestra clase */
 	int anyo;
 	String marca;
@@ -66,8 +68,19 @@ public class Auto {
 	public void setNumeroChapa(long numeroChapa) {
 		this.numeroChapa = numeroChapa;
 	}
-	
-	
 
+	@Override
+	public GpsPosition getPosicion() {	 
+		GpsPosition posicion = new GpsPosition();
+		posicion.setLatitud(33d);
+		posicion.setLatitud(55d);
+		return posicion ;
+	}
+	
+	
+	@Override
+	public ImageIcon getIcon() {
+		return new ImageIcon("");
+	}
 
 }

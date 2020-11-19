@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import py.edu.uc.lp3.herencia.Auto;
+import py.edu.uc.lp3.utilidades.Tracker;
 
 @RestController
 public class AutoController {
@@ -18,6 +19,7 @@ public class AutoController {
 			throw new InscripcionException("El numero de chapa no es par: "  + auto.getNumeroChapa());
 		}
 		//return new Greeting(counter.incrementAndGet(), String.format(template, name));
+		Tracker.rastrear(auto);
 		return auto;
 	}
 	@GetMapping("/auto")

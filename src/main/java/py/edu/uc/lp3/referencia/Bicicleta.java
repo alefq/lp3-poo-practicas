@@ -107,4 +107,14 @@ public class Bicicleta {
 		return null;
 	}
 
+	public static String describir(Bicicleta bici) {
+		return "";
+	}
+
+	public static Bicicleta crearNuevaBicicleta() {
+		Bicicleta bici = new Bicicleta();
+		return bici  ; 
+		
+	}
+
 }

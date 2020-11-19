@@ -1,6 +1,9 @@
 package py.edu.uc.lp3.herencia;
 
+import java.awt.Image;
 import java.io.Serializable;
+
+import javax.swing.ImageIcon;
 
 import py.edu.uc.lp3.exceptions.NacionalidadException;
 
@@ -133,6 +136,11 @@ public class Persona implements Serializable, GPSTraceable {
 //		}
 //		return retorno;
 		return getNombre().compareTo(otraPersona.getNombre()) * -1;
+	}
+	
+	@Override
+	public ImageIcon getIcon() {
+		return new ImageIcon("");
 	}
 
 }

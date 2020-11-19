@@ -13,8 +13,11 @@ public class App {
 		System.out.println("Hello World!");
 		System.out.println("Puede ser numero: " + NumberUtils.isCreatable("1"));
 		System.out.println("Puede ser numero: " + NumberUtils.isCreatable("algo"));
-		Bicicleta giant = new Bicicleta();
-		giant.frenarGolpe();
+//		Bicicleta giant = new Bicicleta();
+//		giant.
+//		
+//		giant.frenarGolpe();
+		Bicicleta caloi = Bicicleta.crearNuevaBicicleta();
 
 	}
 }

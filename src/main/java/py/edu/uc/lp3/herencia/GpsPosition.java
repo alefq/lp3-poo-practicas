@@ -15,7 +15,10 @@ public class GpsPosition {
 	public void setLongitud(Double longitud) {
 		this.longitud = longitud;
 	}
-	
+	@Override
+	public String toString() {
+		return "GpsPosition [latitud=" + latitud + ", longitud=" + longitud + "]";
+	}
 	
 
 }

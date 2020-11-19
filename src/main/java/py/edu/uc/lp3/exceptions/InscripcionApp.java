@@ -1,6 +1,10 @@
 package py.edu.uc.lp3.exceptions;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+
+import org.apache.commons.lang3.StringUtils;
 
 import py.edu.uc.lp3.herencia.Alumno;
 import py.edu.uc.lp3.herencia.Persona;
@@ -69,6 +73,7 @@ public class InscripcionApp {
 			 * nacionalidad permitida
 			 */
 			poojava.inscribirPersona(alumno2);
+			StringUtils.isEmpty(alumno.getNombre());
 		} catch (NacionalidadException e) {
 			/*
 			 * Se puede tratar la excepción en un handler dentro del bloque
@@ -78,6 +83,7 @@ public class InscripcionApp {
 					.println("Al inscribir un alumno ocurrio el siguiente problema:"
 							+ e.getMessage());
 			e.printStackTrace();
+			
 			/*
 			 * Para casos generalizables se puede crear una utilidad para tratar
 			 * las excepciones
