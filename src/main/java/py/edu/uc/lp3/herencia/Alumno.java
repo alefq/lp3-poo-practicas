@@ -28,7 +28,12 @@ public class Alumno extends Persona {
         super(-1, "sin nombre");
     }
 
-    public int getNumeroMatricula() {
+    public Alumno(String nombre1, String apellido1, Integer edad, Integer matricula) {
+		this(nombre1, apellido1, edad);
+		setNumeroMatricula(matricula);
+	}
+
+	public int getNumeroMatricula() {
         return numeroMatricula;
     }
 
