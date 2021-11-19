@@ -1,5 +1,9 @@
 package py.edu.uc.lp3.interfaces;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Vector;
 
 public class BatallaApp {
 
@@ -13,46 +17,32 @@ public class BatallaApp {
 		Ropa ropa = new Ropa();
 
 		/*
-		 * Como la biciVoladora, sabe como volar (implementa la interface
-		 * Volador), podemos utilizarla en cualquier metodo que haga volar
+		 * Como la biciVoladora, sabe como volar (implementa la interface Volador),
+		 * podemos utilizarla en cualquier metodo que haga volar
 		 */
 		BiciVoladora biciVoladora = new BiciVoladora();
 
-		batalla.hacerVolar(superman, biciVoladora);
-		
-		
-		
+//		batalla.hacerVolar(superman, );
+
+		ArrayList<String> lista = new ArrayList<>();
+		Vector<Integer> lista2 = new Vector<>();
+		Collections.sort(lista);
+		Collections.sort(lista2);
+
 		batalla.hacerVolar(superman, antiHeroe);
 		batalla.hacerVolar(ropa, biciVoladora);
-		
-		
+
 		batalla.hacerPelear(superman, antiHeroe);
-		
+
 		/*
-		 * Esta llamada no es válida porque superman, no sabe mentir (no tiene
-		 * el comportamiento de la interface Mentiroso)
+		 * Esta llamada no es válida porque superman, no sabe mentir (no tiene el
+		 * comportamiento de la interface Mentiroso)
 		 */
 		// batalla.hacerMentir(superman, antiHeroe);
 	}
 
 	public void hacerVolar(Volador v1, Volador v2) {
-		/*
-		 * El operador instanceof me retorna un boolean que indica si es o no
-		 * una instancia de un tipo de Clase
-		 */
-		if (v1 instanceof Superman) {
-			/* Hacemos un downcasting de v1 */
-			Superman superM = (Superman) v1;
-			String color = superM.getColorCapa();
-			System.out.println(color);
-		}
-		if (v2 instanceof Superman) {
-			Superman superM = (Superman) v1;
-			String color = superM.getColorCapa();
-			System.out.println(color);
-		} else {
-			System.out.println("No es de tipo Superman");
-		}
+
 		v1.volar();
 		v2.volar();
 	}

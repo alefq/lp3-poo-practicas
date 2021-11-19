@@ -3,6 +3,8 @@ package py.edu.uc.lp3.inicializacion;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.apache.commons.lang3.StringUtils;
+
 import py.edu.uc.lp3.exceptions.EdadInsuficienteException;
 import py.edu.uc.lp3.exceptions.NacionalidadException;
 import py.edu.uc.lp3.herencia.Alumno;
@@ -54,6 +56,10 @@ public class Materia {
 		this();
 		setCodigo(codigo);
 	}
+	
+	public Materia(String codigo, Profesor prof) {
+		this(codigo);		
+	}
 
 	/*
 	 * El método main con esta firma convierte a esta clase Java en una aplicación
@@ -90,6 +96,8 @@ public class Materia {
 		getAlumno().setNumeroMatricula(37122);
 		System.out.println("Alumno: " + getAlumno());
 		System.out.println("Profesor: " + getProfesor());
+		
+		StringUtils.isAlphanumeric("algo");
 
 		reservarSilla(getAlumno());
 		reservarSilla(getProfesor());

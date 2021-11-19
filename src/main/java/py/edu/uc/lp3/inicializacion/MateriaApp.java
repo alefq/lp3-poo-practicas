@@ -1,5 +1,8 @@
 package py.edu.uc.lp3.inicializacion;
 
+import javax.swing.JWindow;
+
+import py.edu.uc.lp3.utilidades.Vigilante;
 
 public class MateriaApp {
 
@@ -9,6 +12,8 @@ public class MateriaApp {
 	public MateriaApp() {
 		algoritmia = new Materia("DW00");
 		java1 = new Materia("DW06");
+		this.algoritmia = null;
+    	Vigilante.notificarExcepcion(null);
 		/*
 		 * El IDE Eclipse nos muestra esta línea como un warning ya que no se
 		 * recomienda acceder a una variable estática de forma no estática, es
