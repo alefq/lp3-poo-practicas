@@ -34,6 +34,9 @@ public class BatallaApp {
 
 		batalla.hacerPelear(superman, antiHeroe);
 
+		MapaJuego.refrescarMapa(superman);
+		MapaJuego.refrescarMapa(biciVoladora);
+		MapaJuego.fijarDuenhoMapa(antiHeroe);
 		/*
 		 * Esta llamada no es válida porque superman, no sabe mentir (no tiene el
 		 * comportamiento de la interface Mentiroso)

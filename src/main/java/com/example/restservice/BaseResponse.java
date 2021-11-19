@@ -1,9 +1,12 @@
 package com.example.restservice;
 
+import java.util.ArrayList;
+
 public class BaseResponse {
 	protected String mensaje;
 	protected  int codigoHttp;
 	protected  boolean exito;
+	ArrayList<Mensaje> mensajes;
 	
 	public String getMensaje() {
 		return mensaje;

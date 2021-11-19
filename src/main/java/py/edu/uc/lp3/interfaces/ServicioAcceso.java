@@ -6,6 +6,7 @@ public interface ServicioAcceso {
 
 	boolean validarLogin(String nombreUsuario, String contrasenha);
 	ArrayList<String> listarRoles(String nombreUsuario);
+
 	ArrayList<String> listarPermisos(String rolDeUsuario);
-	
+
 }

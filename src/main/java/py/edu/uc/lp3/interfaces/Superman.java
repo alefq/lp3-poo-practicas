@@ -1,8 +1,9 @@
 package py.edu.uc.lp3.interfaces;
 
+import py.edu.uc.lp3.herencia.GpsPosition;
 import py.edu.uc.lp3.herencia.Persona;
 
-public class Superman extends Persona implements Volador, Peleador, Cotizable {
+public class Superman extends Persona implements Volador, Peleador, Cotizable, VideoJuegoPosicionable {
 	/*
 	 * Hacemos que la calse Superman herede de Persona, y además que implemente
 	 * las capacidades/protocolos/comportamientos de Volador y Peleador
@@ -59,6 +60,26 @@ public class Superman extends Persona implements Volador, Peleador, Cotizable {
 	public Double getPrecioUSD(String identificador) {
 		// TODO Auto-generated method stub
 		return getPrecio(identificador)*Moneda.COTIZACION_DEFAULT_DOLAR;
+	}
+
+	@Override
+	public GpsPosition getPosicion() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Avatar getAvatar() {
+		Avatar avatar = new Avatar();
+		avatar.setNickname("Clark");
+		return avatar ;
+	}
+
+	@Override
+	public Posicion getUbicacion() {
+		Posicion ubicacion = new Posicion();
+		ubicacion.setX(0.3);
+		return ubicacion ;
 	}
 
 
