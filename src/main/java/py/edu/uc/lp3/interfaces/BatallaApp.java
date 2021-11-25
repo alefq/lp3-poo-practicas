@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Vector;
 
+import py.edu.uc.lp3.exceptions.MapaException;
+
 public class BatallaApp {
 
 	/**
@@ -34,8 +36,16 @@ public class BatallaApp {
 
 		batalla.hacerPelear(superman, antiHeroe);
 
-		MapaJuego.refrescarMapa(superman);
-		MapaJuego.refrescarMapa(biciVoladora);
+		try {
+			//Superman tiene un avatar con nickame
+			MapaJuego.refrescarMapa(superman);
+			//BiciVoladora no tiene nickame y por eso no pasa la valdiación
+			//y tira el MapAException
+			MapaJuego.refrescarMapa(biciVoladora);
+		} catch (MapaException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		MapaJuego.fijarDuenhoMapa(antiHeroe);
 		/*
 		 * Esta llamada no es válida porque superman, no sabe mentir (no tiene el

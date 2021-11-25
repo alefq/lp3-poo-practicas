@@ -11,8 +11,7 @@ public class BiciVoladora extends Bicicleta implements Volador, VideoJuegoPosici
 
 	@Override
 	public Avatar getAvatar() {
-		Avatar avatar = new Avatar();
-		avatar.setNickname("Giant");
+		Avatar avatar = new Avatar();		
 		return avatar ;
 	}
 
