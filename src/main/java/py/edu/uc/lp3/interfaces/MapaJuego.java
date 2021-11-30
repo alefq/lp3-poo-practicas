@@ -1,5 +1,7 @@
 package py.edu.uc.lp3.interfaces;
 
+import java.util.ArrayList;
+
 import org.apache.commons.lang3.StringUtils;
 
 import py.edu.uc.lp3.exceptions.MapaException;
@@ -12,6 +14,8 @@ public class MapaJuego {
 		Avatar avatar = posicionable.getAvatar();
 		Posicion posicion = posicionable.getUbicacion();
 
+		ArrayList<Avatar> lista = new ArrayList<>();
+		Avatar miAvatar = lista.get(0);
 		if(StringUtils.isBlank(avatar.getNickname())) {
 			throw new MapaException("Se requiere un nickaname para poder pintar el avatar");
 		}
