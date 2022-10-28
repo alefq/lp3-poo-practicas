@@ -1,5 +1,5 @@
-# lp3-2020
-Lenguaje de Programación 3 - Semestre 2020
+# lp3-poo-practicas
+Lenguaje de Programación 3 - Programación Orientada a Objetos
 
 ## Ingeniería Informática
 
