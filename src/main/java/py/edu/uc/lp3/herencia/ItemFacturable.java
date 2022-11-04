@@ -4,6 +4,17 @@ import java.awt.Image;
 
 public class ItemFacturable {
 	
+	Double rating;
+
+	
+	public Double getRating() {
+		return rating;
+	}
+
+	public void setRating(Double rating) {
+		this.rating = rating;
+	}
+
 	public String getDescripcion() {
 		return descripcion;
 	}
