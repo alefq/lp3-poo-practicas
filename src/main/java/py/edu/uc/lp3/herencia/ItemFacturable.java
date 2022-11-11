@@ -2,7 +2,7 @@ package py.edu.uc.lp3.herencia;
 
 import java.awt.Image;
 
-public class ItemFacturable {
+public class ItemFacturable implements Comparable<ItemFacturable> {
 	
 	Double rating;
 
@@ -61,5 +61,15 @@ public class ItemFacturable {
 		System.out.println("Precio 1: "+ item1.calcularPrecio());
 
 		System.out.println("Precio 2: "+ item2.calcularPrecio());
+		 item1.compareTo(item2);
+	}
+
+	@Override
+	public int compareTo(ItemFacturable itemAComparar) {
+		// TODO Auto-generated method stub
+		int retorno = getPrecio().compareTo(itemAComparar.getPrecio());;
+		return retorno;
+//		return getCodigo().compareTo(itemAComparar.getCodigo());
+		
 	}
 }
