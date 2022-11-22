@@ -1,5 +1,7 @@
 package py.edu.uc.lp3.interfaces;
 
+import javax.swing.ImageIcon;
+
 import py.edu.uc.lp3.herencia.GpsPosition;
 import py.edu.uc.lp3.herencia.Persona;
 
@@ -62,12 +64,22 @@ public class Superman extends Persona implements Volador, Peleador, Cotizable, V
 		return getPrecio(identificador)*Moneda.COTIZACION_DEFAULT_DOLAR;
 	}
 
-	@Override
-	public GpsPosition getPosicion() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
+	@Override
+	public GpsPosition getPosicion() {	 
+		GpsPosition posicion = new GpsPosition();
+		posicion.setLatitud(33d);
+		posicion.setLatitud(55d);
+		return posicion ;
+	}
+	
+	
+	@Override
+	public ImageIcon getIcon() {
+		return new ImageIcon("");
+	}
+	
+	
 	@Override
 	public Avatar getAvatar() {
 		Avatar avatar = new Avatar();
@@ -79,6 +91,8 @@ public class Superman extends Persona implements Volador, Peleador, Cotizable, V
 	public Posicion getUbicacion() {
 		Posicion ubicacion = new Posicion();
 		ubicacion.setX(0.3);
+		ubicacion.setY(1.0);
+		ubicacion.setZ(3.3);
 		return ubicacion ;
 	}
 

@@ -142,5 +142,11 @@ public class Persona implements Serializable, GPSTraceable {
 	public ImageIcon getIcon() {
 		return new ImageIcon("");
 	}
+	
+	@Override
+	public String toString() {
+		String miString = getNombre() + ", " + getApellido();
+		return miString;
+	}
 
 }
