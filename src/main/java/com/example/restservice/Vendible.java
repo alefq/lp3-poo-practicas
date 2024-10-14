@@ -1,6 +1,11 @@
 package com.example.restservice;
 
-public class Vendible {
+import py.edu.uc.lp3.interfaces.Avatar;
+import py.edu.uc.lp3.interfaces.Cotizable;
+import py.edu.uc.lp3.interfaces.Posicion;
+import py.edu.uc.lp3.interfaces.VideoJuegoPosicionable;
+
+public class Vendible  implements VideoJuegoPosicionable, Cotizable {
     Long precio;
     String descripcion;
 
@@ -18,5 +23,25 @@ public class Vendible {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    @Override
+    public Posicion getUbicacion() {
+        return null;
+    }
+
+    @Override
+    public Avatar getAvatar() {
+        return null;
+    }
+
+    @Override
+    public Long getPrecio(String identificador) {
+        return 0l;
+    }
+
+    @Override
+    public Double getPrecioUSD(String identificador) {
+        return 0.0;
     }
 }
