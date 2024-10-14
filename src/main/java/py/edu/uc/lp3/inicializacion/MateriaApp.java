@@ -12,8 +12,8 @@ public class MateriaApp {
 	public MateriaApp() {
 		algoritmia = new Materia("DW00");
 		java1 = new Materia("DW06");
-		this.algoritmia = null;
-    	Vigilante.notificarExcepcion(null);
+//		this.algoritmia = null;
+//    	Vigilante.notificarExcepcion(java1.getProfesor());
 		/*
 		 * El IDE Eclipse nos muestra esta línea como un warning ya que no se
 		 * recomienda acceder a una variable estática de forma no estática, es

@@ -86,6 +86,7 @@ public class Materia {
 		/* Enviamos el mensaje de arrancar a la clase recientemente creada */
 		transporteDefault.arrancar();
 
+		setTransporte(transporteDefault);
 		setAlumno(new Alumno());
 		setProfesor(new Profesor());
 
